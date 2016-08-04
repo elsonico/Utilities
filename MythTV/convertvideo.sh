@@ -15,7 +15,7 @@ fi
 TESTRUN=false
 DBNAME=mythconverg
 DBUSER=mythtv
-DBPASSWD=Cf0cmJoU
+DBPASSWD=*******
 fname=$1
 
 sql_starttime="select starttime from recorded where basename = '$fname';"

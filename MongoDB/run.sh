@@ -15,7 +15,7 @@ MONGOHOST=quelimane
 
 # Start config servers
 
-for i in {0..2}
+for i in {0..2} # Define and create # of config servers
 do
     if ! [ -d cfg${i} ]
     then
@@ -30,10 +30,10 @@ done
 # Start the mongods
 
 k=0
-for i in {a,b,c,d}
+for i in {a,b,c,d} # Define number of SHARDs
 do
     let k++
-    for j in {0..2}
+    for j in {0..2} # Define number of replicas in a set
     do
         if ! [ -d $i$j ]
         then
@@ -50,9 +50,11 @@ done
 
 # Start mongoss
 
+# First mongos should listen default port
 echo mongos --configdb $MONGOHOST:26050,$MONGOHOST:26051,$MONGOHOST:26052 --fork --logappend --logpath log.mongos0
 mongos --configdb $MONGOHOST:26050,$MONGOHOST:26051,$MONGOHOST:26052 --fork --logappend --logpath log.mongos0 >> $LOG
 
+# Define number of remaining mongos servers
 for i in {1..3}
 do
     echo mongos --configdb $MONGOHOST:26050,$MONGOHOST:26051,$MONGOHOST:26052 --fork --logappend --logpath log.mongos${i} --port 2606${i}

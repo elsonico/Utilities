@@ -17,4 +17,4 @@ do
     kill $i
 done
 
-rm -rf $BASDIR
+rm -rf $BASDIR/*

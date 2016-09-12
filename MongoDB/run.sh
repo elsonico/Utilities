@@ -29,22 +29,10 @@ done
 
 # Start the mongods
 
+k=0
 for i in {a,b,c,d}
 	do
-		case $i in
-			[a]*)
-			k=0
-			;;
-			[b]*)
-			k=1
-			;;
-			[c]*)
-			k=2
-			;;
-			[d]*)
-			k=3
-			;;
-		esac
+		let k++
 		for j in {0..2}
 			do
 				if ! [ -d $i$j ]

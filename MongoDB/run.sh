@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # *********************************** #
-# Scipt to test Shard with MongoDB    #
+# Script to test Shard with MongoDB   #
 #                                     #
-# on single server environment.
+# on single server environment.       #
+#                                     #
+#             v0.1 09/12/16           #
 #                                     #
 # *********************************** #
 

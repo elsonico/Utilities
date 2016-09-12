@@ -10,7 +10,7 @@
 # *********************************** #
 
 BASDIR=/home/tav/mycluster
-LOG=$BASDIR/process.txt
+LOG=$BASDIR/cluster.log
 MONGOHOST=quelimane
 
 # Start config servers

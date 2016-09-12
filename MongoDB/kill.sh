@@ -9,7 +9,7 @@
 # *********************************** #
 
 BASDIR=/home/tav/mycluster
-LOG=$BASDIR/process.txt
+LOG=$BASDIR/cluster.log
 
 
 for i in `grep forked\ process $LOG | awk '{print $NF}'`

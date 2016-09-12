@@ -8,7 +8,7 @@ mongos> db.shards.find()<br>
 <p>
 1. Start SHARD with run.sh<br>
 2. Create replication sets<br>
-3. Create SHARDs
+3. Create SHARDs<br>
 4. Clean up with kill.sh (you will loose log and data).
 </p>
 

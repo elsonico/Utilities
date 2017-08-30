@@ -3,7 +3,7 @@
 # Purpose of this script is to extract data from source
 # Netezza appliance to different destination Netezza appliance.
 #
-# For example from Netezza Staging to Netezza DEV.
+# For example from Netezza PROD to Netezza DEV.
 #
 #  AUTHOR: Tapio Vaattanen
 #  RELEASE HISTORY:
@@ -13,16 +13,16 @@
 TRUNCATE="no"
 
 # Source Netezza settings: MUST BE CHANGED!!!
-SRC_NZ_USER=username
+SRC_NZ_USER=admin
 SRC_NZ_PASSWORD=password
-SRC_NZ_HOST=production.nz2.db.loyalty.com
-SRC_NZ_DATABASE=STGDP
+SRC_NZ_HOST=production.example.com
+SRC_NZ_DATABASE=DB1
 
 # Destination Netezza settings: MUST BE CHANGED!!!
 DST_NZ_USER=admin
 DST_NZ_PASSWORD=password
-DST_NZ_HOST=mis-ahn-0005.loyalty.com
-DST_NZ_DATABASE=TAVTEST
+DST_NZ_HOST=dev.example.com
+DST_NZ_DATABASE=DB2
 
 # Specify tablenames separated by space.
 TABLES="TMP_COLLECTOR_KEY_LKP"

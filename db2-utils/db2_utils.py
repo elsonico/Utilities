@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-""" Testing connecting to DB2  utilizing pyodbc.
+""" Testing connecting to DB2 utilizing pyodbc.
 
     AUTHOR: Tapio Vaattanen
     RELEASE HISTORY:

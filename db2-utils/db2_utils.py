@@ -58,4 +58,11 @@ class DB2Utils(object):
             row = crs.fetchone()
             if not row:
                 break
-            print(row[0])
+            #print("Table name: %s" % row[0])
+            print("Table name: %s" % row[0])
+
+    def fetch_one(self, connection, query):
+        crs = connection.cursor()
+        crs.execute(query)
+        row = crs.fetchone()
+        return row
